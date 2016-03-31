@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="use_card">
+        <item>По выбору пункта меню</item>
+        <item>По нажатию на карточку</item>
+        <item>Оба способа</item>
+    </string-array>
+    <string-array name="use_cardAlias">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

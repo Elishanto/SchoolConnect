@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="USE_CARD"
+        android:title="Открытие подробного списка оценок"
+        android:summary="По нажатию на пункт меню"
+        android:entries="@array/use_card"
+        android:entryValues="@array/use_cardAlias"/>
+</PreferenceScreen>
