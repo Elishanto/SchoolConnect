@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.activity;
+package com.elishanto.schoololoconnect.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -8,20 +8,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.ContextThemeWrapper;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Base64;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.task.AuthTask;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.task.AuthTask;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.nio.charset.StandardCharsets;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     ImageView ivShow_pass;
     static Button btEnter;
     ProgressDialog dialog;
+    static InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,9 @@ public class LoginActivity extends AppCompatActivity {
                         dialog = ProgressDialog.show(new ContextThemeWrapper(LoginActivity.this, R.style.MaterialBaseTheme_Light_AlertDialog), "", "Авторизация", true, false);
                         new AuthTask().execute(getApplicationContext(), LoginActivity.this, preferences.getString("login", ""), preferences.getString("password", ""), dialog);
                     } else {
+                        AdView mAdView = (AdView) findViewById(R.id.adViewLogin);
+                        AdRequest adRequest = new AdRequest.Builder().build();
+                        mAdView.loadAd(adRequest);
                         etLogin = (EditText) findViewById(R.id.etLogin);
                         etPassword = (EditText) findViewById(R.id.etPassword);
                         ivShow_pass = (ImageView) findViewById(R.id.ivShow_pass);
@@ -82,16 +87,40 @@ public class LoginActivity extends AppCompatActivity {
                         btEnter.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                btEnter.setEnabled(false);
-                                dialog = ProgressDialog.show(new ContextThemeWrapper(LoginActivity.this, R.style.MaterialBaseTheme_Light_AlertDialog), "", "Авторизация", true, false);
-                                new AuthTask().execute(getApplicationContext(), LoginActivity.this, etLogin.getText().toString(), etPassword.getText().toString(), dialog);
+                                if (interstitialAd.isLoaded())
+                                    interstitialAd.show();
+                                else
+                                    auth();
                             }
                         });
+
+                        interstitialAd = new InterstitialAd(this);
+                        interstitialAd.setAdUnitId("ca-app-pub-8050884723094020/2084358009");
+
+                        interstitialAd.setAdListener(new AdListener() {
+                            @Override
+                            public void onAdClosed() {
+                                requestNewInterstitial();
+                                auth();
+                            }
+                        });
+                        requestNewInterstitial();
                     }
                 }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        interstitialAd.loadAd(adRequest);
+    }
+
+    private void auth() {
+        btEnter.setEnabled(false);
+        dialog = ProgressDialog.show(new ContextThemeWrapper(LoginActivity.this, R.style.MaterialBaseTheme_Light_AlertDialog), "", "Авторизация", true, false);
+        new AuthTask().execute(getApplicationContext(), LoginActivity.this, etLogin.getText().toString(), etPassword.getText().toString(), dialog);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.adapter;
+package com.elishanto.schoololoconnect.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -17,10 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.activity.MainActivity;
-import com.elishanto.schoolconnect.fragment.MarksFragment;
-import com.elishanto.schoolconnect.fragment.SubjectFragment;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.activity.MainActivity;
+import com.elishanto.schoololoconnect.fragment.MarksFragment;
+import com.elishanto.schoololoconnect.fragment.SubjectFragment;
 
 import java.util.List;
 

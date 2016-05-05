@@ -1,16 +1,12 @@
-package com.elishanto.schoolconnect.activity;
+package com.elishanto.schoololoconnect.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.adapter.Homework;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.adapter.Homework;
 
 /**
  * Created by elishanto on 04/02/16.

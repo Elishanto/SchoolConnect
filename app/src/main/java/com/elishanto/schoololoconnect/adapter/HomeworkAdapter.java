@@ -1,18 +1,16 @@
-package com.elishanto.schoolconnect.adapter;
+package com.elishanto.schoololoconnect.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.activity.MainActivity;
-import com.elishanto.schoolconnect.fragment.HomeworkFragment;
-import com.elishanto.schoolconnect.activity.TaskActivity;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.fragment.HomeworkFragment;
+import com.elishanto.schoololoconnect.activity.TaskActivity;
 
 import java.util.List;
 

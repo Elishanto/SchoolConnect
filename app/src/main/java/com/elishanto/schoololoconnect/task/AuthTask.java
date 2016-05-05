@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.task;
+package com.elishanto.schoololoconnect.task;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -6,11 +6,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.util.Base64;
 import android.widget.Toast;
 
-import com.elishanto.schoolconnect.activity.LoginActivity;
-import com.elishanto.schoolconnect.activity.MainActivity;
+import com.elishanto.schoololoconnect.Helper;
+import com.elishanto.schoololoconnect.activity.LoginActivity;
+import com.elishanto.schoololoconnect.activity.MainActivity;
 import com.parse.ParseInstallation;
 
 import org.json.JSONException;
@@ -40,7 +40,7 @@ public class AuthTask extends AsyncTask<Object, Void, Boolean> {
         dialog = (ProgressDialog) params[4];
         System.out.println(Arrays.toString(params));
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(String.format("http://185.117.154.149:8081/auth?login=%s&password=%s", login, password)).openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URL(String.format("http://%s:8081/auth?login=%s&password=%s", Helper.getConfigValue(context, "server_ip"), login, password)).openConnection();
             connection.setRequestMethod("GET");
             connection.connect();
             InputStream inputStream = connection.getInputStream();

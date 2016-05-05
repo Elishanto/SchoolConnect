@@ -1,17 +1,14 @@
-package com.elishanto.schoolconnect.fragment;
+package com.elishanto.schoololoconnect.fragment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.widget.ArrayAdapter;
 
-import com.elishanto.schoolconnect.R;
+import com.elishanto.schoololoconnect.R;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

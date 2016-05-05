@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.fragment;
+package com.elishanto.schoololoconnect.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.elishanto.schoolconnect.activity.MainActivity;
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.adapter.Subject;
-import com.elishanto.schoolconnect.adapter.SubjectAdapter;
+import com.elishanto.schoololoconnect.activity.MainActivity;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.adapter.Subject;
+import com.elishanto.schoololoconnect.adapter.SubjectAdapter;
 
 public class SubjectFragment extends Fragment {
     RecyclerView rv;

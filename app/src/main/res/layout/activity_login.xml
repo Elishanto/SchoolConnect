@@ -1,88 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:src="@drawable/ic_logo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etLogin"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:height="50dp"
+            android:hint="Логин"
+            android:inputType="textNoSuggestions|textFilter"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etLogin"
+            android:layout_centerHorizontal="true"
+            android:height="50dp"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
         <ImageView
+            android:id="@+id/ivShow_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/iv_background"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/background"
-            android:scaleType="centerCrop" />
+            android:layout_alignBottom="@+id/etPassword"
+            android:layout_alignRight="@+id/etPassword"
+            android:layout_alignTop="@+id/etPassword"
+            android:padding="5dp"
+            android:src="@drawable/ic_remove_red_eye_white_24dp" />
 
-        <ImageView
+        <Button
+            android:id="@+id/btEnter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ivLogo"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_logo"
-            android:paddingTop="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignEnd="@+id/etPassword"
+            android:layout_alignLeft="@+id/etPassword"
+            android:layout_alignRight="@+id/etPassword"
+            android:layout_alignStart="@+id/etPassword"
+            android:layout_below="@+id/etPassword"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/button_login"
+            android:text="войти"
+            android:textColor="#bababa"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
-        <RelativeLayout
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
 
-            <EditText
-                android:layout_width="289dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/etLogin"
-                android:textSize="20sp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/white"
-                android:height="50dp"
-                android:hint="Логин"
-                android:singleLine="true"
-                android:inputType="textNoSuggestions|textFilter" />
-
-            <EditText
-                android:layout_width="289dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/etPassword"
-                android:textSize="20sp"
-                android:layout_below="@+id/etLogin"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/white"
-                android:height="50dp"
-                android:hint="Пароль"
-                android:singleLine="true"
-                android:inputType="textPassword" />
-            <ImageView
-                android:id="@+id/ivShow_pass"
-                android:padding="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/etPassword"
-                android:layout_alignBottom="@+id/etPassword"
-                android:layout_alignRight="@+id/etPassword"
-                android:src="@drawable/ic_remove_red_eye_white_24dp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="войти"
-                android:background="@drawable/button_login"
-                android:id="@+id/btEnter"
-                android:layout_below="@+id/etPassword"
-                android:layout_marginTop="70dp"
-                android:layout_alignRight="@+id/etPassword"
-                android:layout_alignEnd="@+id/etPassword"
-                android:layout_alignLeft="@+id/etPassword"
-                android:layout_alignStart="@+id/etPassword"
-                android:textColor="#bababa"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignWithParentIfMissing="false"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"/>
+    </RelativeLayout>
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.activity;
+package com.elishanto.schoololoconnect.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,12 +11,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.adapter.Homework;
-import com.elishanto.schoolconnect.adapter.Subject;
-import com.elishanto.schoolconnect.fragment.HomeworkFragment;
-import com.elishanto.schoolconnect.fragment.MarksFragment;
-import com.elishanto.schoolconnect.fragment.SubjectFragment;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.adapter.Homework;
+import com.elishanto.schoololoconnect.adapter.Subject;
+import com.elishanto.schoololoconnect.fragment.HomeworkFragment;
+import com.elishanto.schoololoconnect.fragment.MarksFragment;
+import com.elishanto.schoololoconnect.fragment.SubjectFragment;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;

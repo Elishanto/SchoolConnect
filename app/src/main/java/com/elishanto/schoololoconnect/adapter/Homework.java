@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.adapter;
+package com.elishanto.schoololoconnect.adapter;
 
 /**
  * Created by elishanto on 04/02/16.

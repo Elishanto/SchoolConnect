@@ -1,8 +1,7 @@
-package com.elishanto.schoolconnect.adapter;
+package com.elishanto.schoololoconnect.adapter;
 
 import android.support.v4.util.Pair;
 
-import java.util.HashMap;
 import java.util.List;
 
 

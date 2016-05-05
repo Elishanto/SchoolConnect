@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.fragment;
+package com.elishanto.schoololoconnect.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import com.elishanto.schoolconnect.activity.MainActivity;
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.adapter.MarksAdapter;
-import com.elishanto.schoolconnect.adapter.Subject;
-import com.elishanto.schoolconnect.task.MarksTask;
+import com.elishanto.schoololoconnect.activity.MainActivity;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.adapter.MarksAdapter;
+import com.elishanto.schoololoconnect.adapter.Subject;
+import com.elishanto.schoololoconnect.task.MarksTask;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,6 @@
-package com.elishanto.schoolconnect.fragment;
+package com.elishanto.schoololoconnect.fragment;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,15 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import com.elishanto.schoolconnect.DividerItemDecoration;
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.activity.MainActivity;
-import com.elishanto.schoolconnect.adapter.Homework;
-import com.elishanto.schoolconnect.adapter.HomeworkAdapter;
-import com.elishanto.schoolconnect.adapter.MarksAdapter;
-import com.elishanto.schoolconnect.adapter.Subject;
-import com.elishanto.schoolconnect.task.HomeworkTask;
-import com.elishanto.schoolconnect.task.MarksTask;
+import com.elishanto.schoololoconnect.DividerItemDecoration;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.activity.MainActivity;
+import com.elishanto.schoololoconnect.adapter.Homework;
+import com.elishanto.schoololoconnect.adapter.HomeworkAdapter;
+import com.elishanto.schoololoconnect.task.HomeworkTask;
 
 import java.util.ArrayList;
 import java.util.List;

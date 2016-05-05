@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect;
+package com.elishanto.schoololoconnect;
 
 import android.content.Context;
 import android.content.res.TypedArray;

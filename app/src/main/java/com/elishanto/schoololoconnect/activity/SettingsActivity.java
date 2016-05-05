@@ -1,23 +1,16 @@
-package com.elishanto.schoolconnect.activity;
+package com.elishanto.schoololoconnect.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.preference.PreferenceActivity;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.ContextThemeWrapper;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.fragment.SettingsFragment;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.fragment.SettingsFragment;
 
 public class SettingsActivity extends AppCompatActivity {
 

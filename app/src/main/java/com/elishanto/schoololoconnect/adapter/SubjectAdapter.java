@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.adapter;
+package com.elishanto.schoololoconnect.adapter;
 
 import android.graphics.Typeface;
 import android.support.v7.widget.CardView;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.elishanto.schoolconnect.R;
+import com.elishanto.schoololoconnect.R;
 
 public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectViewHolder> {
 

@@ -1,4 +1,4 @@
-package com.elishanto.schoolconnect.task;
+package com.elishanto.schoololoconnect.task;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -8,11 +8,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.util.Pair;
 import android.view.View;
 
-import com.elishanto.schoolconnect.R;
-import com.elishanto.schoolconnect.activity.MainActivity;
-import com.elishanto.schoolconnect.adapter.Subject;
-import com.elishanto.schoolconnect.fragment.MarksFragment;
-import com.elishanto.schoolconnect.fragment.SubjectFragment;
+import com.elishanto.schoololoconnect.Helper;
+import com.elishanto.schoololoconnect.R;
+import com.elishanto.schoololoconnect.activity.MainActivity;
+import com.elishanto.schoololoconnect.adapter.Subject;
+import com.elishanto.schoololoconnect.fragment.MarksFragment;
+import com.elishanto.schoololoconnect.fragment.SubjectFragment;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
@@ -43,7 +44,7 @@ public class MarksTask extends AsyncTask<Object, Void, List<Subject>> {
         password = (String) params[1];
         fragment = (Fragment) params[2];
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(String.format("http://185.117.154.149:8081/marks?login=%s&password=%s", login, password)).openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URL(String.format("http://%s:8081/marks?login=%s&password=%s", Helper.getConfigValue(fragment.getContext(), "server_ip"), login, password)).openConnection();
             connection.setRequestMethod("GET");
             connection.connect();
             InputStream inputStream = connection.getInputStream();
